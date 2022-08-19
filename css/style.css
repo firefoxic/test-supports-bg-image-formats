@@ -1,0 +1,103 @@
+.page {
+	height: 100%;
+}
+
+.page__body {
+	margin: 0;
+	min-height: 100%;
+	background-color: hsl(0 0% 95%);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	background-image:
+		image-set(
+			url("../img/test-mobile@1x.jpeg") 1x,
+			url("../img/test-mobile@2x.jpeg") 2x
+		);
+}
+
+/* stylelint-disable */
+@supports (background: -webkit-image-set(url("image.webp") 1x)) and (not (background: image-set(url("image.avif") 1x type("image/avif")))) {
+	.page__body {
+		background-image:
+			-webkit-image-set(
+				url("../img/test-mobile@1x.webp") 1x,
+				url("../img/test-mobile@2x.webp") 2x
+			);
+	}
+}
+
+@supports (background: image-set(url("image.avif") 1x type("image/avif"))) {
+	.page__body {
+		background-image:
+			image-set(
+				url("../img/test-mobile@1x.avif") 1x type("image/avif"),
+				url("../img/test-mobile@2x.avif") 2x type("image/avif")
+			);
+	}
+}
+/* stylelint-enable */
+
+@media (min-width: 768px) {
+	.page__body {
+		background-image:
+			image-set(
+				url("../img/test-tablet@1x.jpeg") 1x,
+				url("../img/test-tablet@2x.jpeg") 2x
+			);
+	}
+
+	/* stylelint-disable */
+	@supports (background: -webkit-image-set(url("image.avif") 1x)) and (not (background: image-set(url("image.avif") 1x type("image/avif")))) {
+		.page__body {
+			background-image:
+				-webkit-image-set(
+					url("../img/test-tablet@1x.webp") 1x,
+					url("../img/test-tablet@2x.webp") 2x
+				);
+		}
+	}
+
+	@supports (background: image-set(url("image.avif") 1x type("image/avif"))) {
+		.page__body {
+			background-image:
+				image-set(
+					url("../img/test-tablet@1x.avif") 1x type("image/avif"),
+					url("../img/test-tablet@2x.avif") 2x type("image/avif")
+				);
+		}
+	}
+	/* stylelint-enable */
+}
+
+@media (min-width: 1080px) {
+	.page__body {
+		background-image:
+			image-set(
+				url("../img/test-desktop@1x.jpeg") 1x,
+				url("../img/test-desktop@2x.jpeg") 2x
+			);
+	}
+
+	/* stylelint-disable */
+	@supports (background: -webkit-image-set(url("image.avif") 1x)) and (not (background: image-set(url("image.avif") 1x type("image/avif")))) {
+		.page__body {
+			background-image:
+				-webkit-image-set(
+					url("../img/test-desktop@1x.webp") 1x,
+					url("../img/test-desktop@2x.webp") 2x
+				);
+		}
+	}
+
+	@supports (background: image-set(url("image.avif") 1x type("image/avif"))) {
+		.page__body {
+			background-image:
+				image-set(
+					url("../img/test-desktop@1x.avif") 1x type("image/avif"),
+					url("../img/test-desktop@2x.avif") 2x type("image/avif")
+				);
+		}
+	}
+	/* stylelint-enable */
+}
