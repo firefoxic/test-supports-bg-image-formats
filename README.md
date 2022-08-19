@@ -1,0 +1,1 @@
+# test-supports-bg-image-formats
