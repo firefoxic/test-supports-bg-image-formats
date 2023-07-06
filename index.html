@@ -4,11 +4,40 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Test supports background image formats</title>
+	<title>Test supports background image</title>
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="page__body">
+<body class="page__body test">
+	<h1 class="page__title">Test supports background image</h1>
+
+	<p class="test__case test__case_support_format">
+		Check the image formats.
+	</p>
+	<p class="test__case test__case_support_imageset">
+		Check supports <code>image-set()</code> without <code>-webkit-</code> prefix.
+	</p>
+	<p class="test__case test__case_support_imageset-supports">
+		Check supports <code>image-set()</code> without <code>-webkit-</code> prefix with fallback via <code>@supports</code>.
+	</p>
+	<p class="test__case test__case_support_imageset-prefixed">
+		Check supports <code>image-set()</code> with <code>-webkit-</code> prefix.
+	</p>
+	<p class="test__case test__case_support_imageset-prefixed-supports">
+		Check supports <code>image-set()</code> with <code>-webkit-</code> prefix with fallback via <code>@supports</code>.
+	</p>
+	<p class="test__case test__case_support_type">
+		Check supports <code>type()</code>.
+	</p>
+	<p class="test__case test__case_support_type-supports">
+		Check supports <code>type()</code> with fallback via <code>@supports</code>.
+	</p>
+	<p class="test__case test__case_support_type-set">
+		Check supports <code>type()</code> within <code>image-set()</code> without <code>-webkit-</code> prefix.
+	</p>
+	<p class="test__case test__case_support_type-set-supports">
+		Check supports <code>type()</code> within <code>image-set()</code> without <code>-webkit-</code> prefix with fallback via <code>@supports</code>.
+	</p>
 </body>
 
 </html>
